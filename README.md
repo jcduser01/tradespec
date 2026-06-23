@@ -47,6 +47,7 @@ Create `apps/api/.env` from `apps/api/.env.example`.
 - `TRADESPEC_ALLOWED_ORIGINS` — comma-separated frontend origins
 - `TRADESPEC_SQLITE_URL` — SQLite connection string for local trade and journal persistence
 - `TRADESPEC_MARKET_DATA_PROVIDER` — defaults to `yahoo-finance`
+- `TRADESPEC_MARKET_DATA_CACHE_TTL_SECONDS` — in-process snapshot cache lifetime in seconds (default `300`)
 - `TRADESPEC_AI_PROVIDER` — defaults to `stub`
 
 ### Frontend
@@ -120,7 +121,7 @@ The MVP uses these core concepts:
 - **time horizon** — expected holding period
 - **expected behavior envelope** — what normal post-entry price action should look like
 
-## Future step plan
+## Build sequence (completed for MVP)
 
 1. Domain models and API contracts
 2. Market data layer
